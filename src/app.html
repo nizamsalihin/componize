@@ -13,11 +13,12 @@
 		/>
 
 		<!-- PRESET STYLING -->
-		<link rel="stylesheet" href="../static/style.css">
-
+		<link rel="stylesheet" href="../node_modules/prismjs/themes/prism-tomorrow.min.css">
+		<link rel="stylesheet" href="/style.css">
 		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover">
+	<body data-sveltekit-preload-data="hover"  class="line-numbers">
 		<div style="display: contents">%sveltekit.body%</div>
+		<script src="../node_modules/prismjs/prism.js"></script>
 	</body>
 </html>

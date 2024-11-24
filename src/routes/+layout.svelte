@@ -13,18 +13,15 @@
             <div class="layout__topbar">
                 <img src="icons/expand.svg" alt="expand icon" class="icon">
             </div>
-            <!-- YOU MAIN CONTENT GOES HERE -->
-            <MainContent />
-        </div>
-        <div class="layout__content-item">
-            <div class="layout__topbar">
-                <img src="icons/cancel.svg" alt="cancel icon" class="icon">
-            </div>
+            <div class="layout__section">
+                 <!-- YOU MAIN CONTENT GOES HERE -->
+                 <MainContent />
 
-            <!-- YOU COMPONENT CODE GOES HERE -->
-             <CodeContent />
-        </div>
+                 <!-- YOU COMPONENT CODE GOES HERE -->
+                 <CodeContent />
 
+             </div>
+        </div>
     </div>
 
     <!-- code goes here -->
@@ -39,7 +36,7 @@
 
         &__content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             transition: grid-template-columns 0.2s ease-in;
 
             &-item:not(:last-child) {
@@ -54,6 +51,10 @@
             gap: 10px;
             overflow: scroll;
             padding: var(--space-content-sm);
+        }
+
+        &__section {
+            padding: var(--space-content);
         }
     }
 
