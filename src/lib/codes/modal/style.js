@@ -1,6 +1,69 @@
 export default `
+// Keyframes
+@keyframes fadeOutDown {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(0,100%,0)
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0,100%,0)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateZ(0)
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes fadeOutDown {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(0,100%,0)
+    }
+}
+
+// Variables
+$font-regular: 'Inter', sans-serif;
+$font-bold: 'Inter', sans-serif;
+$color-black: #000000;
+$alpha: 0.3;
+$gray-dark: #333333;
+$icon-cancel: url('../img/x.svg');
+
 .modal {
-    font: 16px/1.2 $inter-regular;
+    font: 16px/1.2 $font-regular;
     position: fixed;
     z-index: 100;
     top: 0;
@@ -29,7 +92,7 @@ export default `
         justify-content: space-between;
 
         &-cancel {
-            background-image: url('../img/x.svg');
+            background-image: $icon-cancel-path;
             height: 24px;
             width: 24px;
             background-size: cover;
@@ -63,7 +126,7 @@ export default `
     }
 
     &__title {
-        font: 20px/1.2 $inter-bold;
+        font: 20px/1.2 $font-bold;
         color: $gray-dark;
     }
 

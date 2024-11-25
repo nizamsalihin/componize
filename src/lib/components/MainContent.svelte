@@ -11,7 +11,7 @@
 <div class="wrapper">
     <!-- <CodeViewer language="html" code={htmlCode} label="How To Use"/> -->
     <CodeViewer language="javascript" code={jsCode} />
-    <CodeViewer language="css" code={cssCode} />
+    <CodeViewer language="css" code={cssCode} label={'scss'}/>
 </div>
 
 <style>
