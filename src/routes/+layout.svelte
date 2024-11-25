@@ -1,6 +1,6 @@
 <script>
-	import Sidebar from "$lib/Sidebar.svelte";
-    import MainContent from "$lib/MainContent.svelte";
+	import Sidebar from "$lib/components/Sidebar.svelte";
+    import MainContent from "$lib/components/MainContent.svelte";
 </script>
 
 <div class="layout">
