@@ -1,11 +1,21 @@
 <script>
-    import Prism from 'prismjs'
-    import code from './modal';
+	import CodeViewer from './CodeViewer.svelte';
+    import htmlCode from '$lib/codes/modal/element';
+    import jsCode from '$lib/codes/modal/script';
+    import cssCode from '$lib/codes/modal/style';
 
-    const html = Prism.highlight(code, Prism.languages.javascript, 'javascript');
 </script>
-<!-- TODO: make better -->
- <!-- https://claude.ai/chat/1d9dbfff-cfe0-4bdc-b72c-6a3d95854ad3 -->
-<pre class="line-numbers">
-    <code class="language-javascript">{@html html}</code>
-</pre>
+
+<div class="wrapper">
+    <CodeViewer language="html" code={htmlCode} />
+    <CodeViewer language="javascript" code={jsCode} />
+    <CodeViewer language="css" code={cssCode} />
+</div>
+
+<style>
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-content-sm);
+    }
+</style>
