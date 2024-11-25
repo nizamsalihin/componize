@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Prism from 'prismjs';
-	let { language, code, className = ""} = $props();
+	let { language, code, label = "", className = ""} = $props();
 
 	const codeHTML = Prism.highlight(code, Prism.languages[language], language);
 
@@ -12,7 +12,7 @@
 
 <div class="code-viewer {className}">
 	<div class="code-viewer__header">
-		<div class="code-viewer__header-label">{language.toUpperCase()}</div>
+		<div class="code-viewer__header-label">{label.toUpperCase() || language.toUpperCase()}</div>
 		<button class="code-viewer__header-icon" onclick="{copyCode}">
 			<img src="icons/copy.svg" alt="icon copy" />
 			<span>copy</span>

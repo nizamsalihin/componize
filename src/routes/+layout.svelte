@@ -1,7 +1,6 @@
 <script>
 	import Sidebar from "$lib/Sidebar.svelte";
     import MainContent from "$lib/MainContent.svelte";
-	import CodeContent from "$lib/CodeContent.svelte";
 </script>
 
 <div class="layout">
@@ -14,12 +13,7 @@
                 <img src="icons/expand.svg" alt="expand icon" class="icon">
             </div>
             <div class="layout__section">
-                 <!-- YOU MAIN CONTENT GOES HERE -->
                  <MainContent />
-
-                 <!-- YOU COMPONENT CODE GOES HERE -->
-                 <CodeContent />
-
              </div>
         </div>
     </div>
